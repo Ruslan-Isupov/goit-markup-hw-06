@@ -614,7 +614,7 @@ button {
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
-  row-gap: 72px;
+  row-gap: 48px;
   column-gap: 24px;
 
   li {
@@ -633,6 +633,11 @@ button {
     li {
       width: calc((100% - 24px) / 2);
     }
+  }
+}
+@media only screen and (min-width: 768px) and (max-width:1157px){
+  .portfolio-list {
+      row-gap: 72px;
   }
 }
 
