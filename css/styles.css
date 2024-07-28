@@ -1196,74 +1196,167 @@ input[type="checkbox"]:focus-visible+.modal-agreement-desc>.modal-checkbox {
 
 /* Mobile-menu */
 
-@media only screen and (max-width: 767px) {
-  .mobile-menu {
-    position: fixed;
-    inset: 0;
 
+.mobile-menu {
+ 
+      position: fixed;
+      inset: 0;
+    
+ 
+      gap: 48px;
+    
+      background-color:var(--primary-white-cl);
+      
+    
+      transform: translateX(100%);
+      transition: 400ms ease-in-out;
+      z-index: 999;
+      
+        transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu.is-open {
+  transform: translateX(0);
+
+}
+
+.mobile-menu-wrapper {
+  padding: 40px 16px;
+  padding-top: 72px;
     display: flex;
     flex-direction: column;
     align-items: start;
-    gap: 48px;
-
-    background-color: #fff;
-    padding: 40px 16px;
-    padding-top: 72px;
-
-    transform: translateX(100%);
-    transition: 400ms ease-in-out;
-
-    &.is-open {
-      transform: translateX(0);
-    }
-
-    .navigation-list {
-      display: flex;
-      flex-direction: column;
-      align-items: start;
-      gap: 40px;
-      margin-bottom: auto;
-    }
-
-    .navigation-link {
-      color: #2e2f42;
-      font-size: 36px;
-      font-weight: 700;
-      line-height: 40px;
-      letter-spacing: 0.72px;
-      padding: 0;
-
-      &.active {
-        color: #404bbf;
-      }
-    }
-
-    .header-address {
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-    }
-
-    .address-link {
-      padding: 0;
-      color: #434455;
-      font-family: Roboto;
-      font-size: 20px;
-      font-weight: 500;
-      line-height: 24px;
-      letter-spacing: 0.4px;
-
-      &.accent {
-        color: #4d5ae5;
-      }
-    }
-  }
+    height: 100%;
+    
+    
 }
 
-@media only screen and (min-width: 768px) {
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  align-self: start;
+  gap: 40px;
+  margin-bottom: auto;
 
-  .header-socials.network-list,
-  .menu-btn {
+  
+}
+
+.mob-button {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e7e9fc;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mob-button:hover,
+.mob-button:focus,
+.mob-button:active {
+  background-color:var(--accent-cl);
+  border: none;
+  fill: var(--primary-white-cl);
+}
+
+
+.mobile-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.nav-link {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-link:hover,
+.nav-link:focus,
+.contacts-link:hover,
+.contacts-link:focus,
+.nav-link.current {
+  color:var(--accent-cl);
+}
+.mobile-address {
+  margin-right: 95px;
+}
+
+
+.mobile-address-list {
+  margin-bottom: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.mobile-contacts-link {
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: #434455;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-contacts-link.current {
+  color: #4d5ae5;
+}
+
+.mob-icon-link:hover {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 40px;
+}
+.mob-icon-list {
+display: flex;
+  gap: 40px;
+  justify-content: center;
+  margin-right: 0;
+}
+.mob-icon-item {
+  width: 40px;
+  height: 40px;
+}
+
+.mob-icon-link {
+  width: 100%;
+  height: 100%;
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mob-icon {
+  fill: #e7e9fc;
+}
+
+.mob-icon-link:hover,
+.mob-icon-link:focus {
+  background-color: var(--accent-cl);
+}
+
+
+
+@media screen and (min-width: 768px) {
+  .mobile-menu {
     display: none;
   }
 }
