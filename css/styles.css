@@ -55,6 +55,10 @@ button {
   padding: 0 16px;
   margin: 0 auto;
 }
+
+address {
+ font-style: normal;
+}
 @media screen and (min-width: 768px) {
   .container {
     max-width: 768px;
@@ -357,7 +361,8 @@ button {
     /* display: flex; */
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 24px;
+    column-gap: 24px;
+    row-gap: 72px;
   }
 }
 
@@ -684,7 +689,26 @@ footer .container {
   /* justify-content: center; */
   align-items: center;
 }
+@media only screen and (min-width: 768px) and (max-width:1157px) {
+  footer .container {
+    /* display: flex; */
+    
+    width: 584px;
+    flex-direction: row;
+    column-gap: 24px;
+    align-items: baseline;
+    flex-wrap: wrap;
+  }
+}
 
+@media only screen and (min-width: 1158px) {
+  footer .container {
+    /* display: flex; */
+    flex-direction: row;
+    
+    align-items: baseline;
+  }
+}
 /* .fotter-box {
   display: block; 
   margin-right: 120px;
@@ -742,7 +766,7 @@ footer .networks-link:focus {
   gap: 16px;
 }
 
-.footer-wrapper {
+/* .footer-wrapper {
   display: flex;
   flex-direction: column;
   gap: 72px;
@@ -758,18 +782,19 @@ footer .networks-link:focus {
   .footer-wrapper {
     gap: 120px;
   }
-}
+} */
 @media only screen and (min-width: 768px) {
   .footer-form {
     display: flex;
     gap: 24px;
+    align-self: center;
   }
 }
 /* .footer-form {
   display: flex;
   gap: 24px;
 } */
-
+/*  */
 .subsc-text {
   color: var(--primary-white-cl);
   margin-bottom: 16px;
@@ -786,7 +811,7 @@ footer .networks-link:focus {
   }
 }
 .email-form {
-  width: 264px;
+  width: 288px;
   height: 40px;
   border-radius: 4px;
   border: 1px solid var(--primary-white-cl);
@@ -800,6 +825,14 @@ footer .networks-link:focus {
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   margin-bottom: 16px;
 }
+@media only screen and (min-width: 768px) {
+  .email-form {
+    width: 264px;
+    margin-bottom: 0;
+  }
+}
+
+
 @media only screen and (min-width: 1158px) {
   .email-form {
     margin-bottom: 0;
@@ -818,7 +851,10 @@ footer .networks-link:focus {
 .email-form:focus {
   border: 1px solid #31d0aa;
 }
-
+/* .subscription {
+  display: flex;
+  justify-content: center;
+} */
 .email-btn {
   min-width: 165px;
   height: 40px;
@@ -827,7 +863,6 @@ footer .networks-link:focus {
   align-items: center;
   color: var(--primary-white-cl);
   background-color: var(--brand-cl);
-  /* margin-left: 24px; */
   margin: 0 auto;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border: none;
@@ -851,10 +886,7 @@ footer .networks-link:focus {
   fill: var(--primary-white-cl);
 }
 
-.footer {
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
+
 
 /* @media only screen and (min-width: 768px) {
   footer .container {
@@ -864,13 +896,7 @@ footer .networks-link:focus {
   }
 } */
 
-@media only screen and (min-width: 1158px) {
-  footer .container {
-    /* display: flex; */
-    flex-direction: row;
-    align-items: baseline;
-  }
-}
+
 /* 
 .footer-box {
 
